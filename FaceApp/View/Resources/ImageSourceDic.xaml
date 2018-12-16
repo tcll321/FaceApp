@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <BitmapImage
+        UriSource="BackGround_1.png"
+        CreateOptions="IgnoreImageCache"
+        CacheOption="OnLoad"
+        x:Key="BackGround_1Source" />
+    <BitmapImage
+        UriSource="BackGround_2.png"
+        CreateOptions="IgnoreImageCache"
+        CacheOption="OnLoad"
+        x:Key="BackGround_2Source" />
+    <BitmapImage
+        UriSource="BackGround_3.png"
+        CreateOptions="IgnoreImageCache"
+        CacheOption="OnLoad"
+        x:Key="BackGround_3Source" />
+    <BitmapImage
+        UriSource="BackGround_4.png"
+        CreateOptions="IgnoreImageCache"
+        CacheOption="OnLoad"
+        x:Key="BackGround_4Source" />
+    <BitmapImage
+        UriSource="FaceID_1.png"
+        CreateOptions="IgnoreImageCache"
+        CacheOption="OnLoad"
+        x:Key="FaceID_1Source" />
+    <BitmapImage
+        UriSource="FaceID_2.png"
+        CreateOptions="IgnoreImageCache"
+        CacheOption="OnLoad"
+        x:Key="FaceID_2Source" />
+    <BitmapImage
+        UriSource="FaceID_3.png"
+        CreateOptions="IgnoreImageCache"
+        CacheOption="OnLoad"
+        x:Key="FaceID_3Source" />
+    <BitmapImage
+        UriSource="FaceID_4.png"
+        CreateOptions="IgnoreImageCache"
+        CacheOption="OnLoad"
+        x:Key="FaceID_4Source" />
+    <BitmapImage
+        UriSource="FaceImage.png"
+        CreateOptions="IgnoreImageCache"
+        CacheOption="OnLoad"
+        x:Key="FaceImageSource" />
+    <BitmapImage
+        UriSource="FaceImageBack.png"
+        CreateOptions="IgnoreImageCache"
+        CacheOption="OnLoad"
+        x:Key="FaceImageBackSource" />
+</ResourceDictionary>

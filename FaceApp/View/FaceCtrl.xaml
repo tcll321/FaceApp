@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="FaceApp.FaceCtrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FaceApp"
+             mc:Ignorable="d" 
+             d:DesignHeight="200" d:DesignWidth="180"
+             Background="#202342">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="{Binding BackGroundImage}"  Stretch="UniformToFill" />
+        </Grid.Background>
+        <Image x:Name="imageBack2" Source="Resources/FaceImageBack.png" HorizontalAlignment="Left" Height="80" Margin="50,10,0,0" VerticalAlignment="Top" Width="80"/>
+        <Image x:Name="image" Source="Resources/FaceImage.png" HorizontalAlignment="Left" Height="75" Margin="52,13,0,0" VerticalAlignment="Top" Width="75"/>
+        <local:FaceImageCtrl Width="80" Height="80" Background="Black" DataContext="{Binding VideoOper}" Margin="50,10,50,110"/>
+        <TextBox  x:Name="textBlockID" IsReadOnly="True" Background="{Binding IDImage}" BorderThickness="0" VerticalContentAlignment="Center"  Text="{Binding FaceCtrl.Id}" TextAlignment="Center" HorizontalAlignment="Center" Margin="57,111,59,65" TextBlock.Foreground="White" VerticalAlignment="Center" Width="64" Height="24"/>
+        <TextBlock x:Name="textBlocAge" Text="{Binding FaceCtrl.Age}" HorizontalAlignment="Left" Margin="50,150,0,0" TextWrapping="Wrap" TextBlock.Foreground="White" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlockSex" Text="{Binding FaceCtrl.Sex}" HorizontalAlignment="Left" Margin="102,150,0,0" TextWrapping="Wrap" TextBlock.Foreground="White" VerticalAlignment="Top"/>
+    </Grid>
+</UserControl>

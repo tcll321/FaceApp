@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="FaceApp.StatisticsCtrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FaceApp"
+             mc:Ignorable="d" 
+             d:DesignHeight="150" d:DesignWidth="300"
+             Background="#2B86F9">
+    <Grid TextBlock.Foreground="White">
+        <Grid.Background>
+            <ImageBrush ImageSource="Resources/Statistics_Image.png" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Label x:Name="labelStatistics" Content="今日行为统计：" TextBlock.FontSize="15" TextBlock.FontFamily="微软雅黑" TextBlock.Foreground="White" HorizontalAlignment="Left" Margin="32,8,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelHandle" Content="打招呼" TextBlock.FontSize="13" TextBlock.FontFamily="微软雅黑" TextBlock.Foreground="White" HorizontalAlignment="Left" Margin="66,50,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelHandleCount" Content="(次)" TextBlock.FontSize="10" TextBlock.FontFamily="微软雅黑" TextBlock.Foreground="White" HorizontalAlignment="Left" Margin="119,104,0,0" VerticalAlignment="Top" Width="27"/>
+        <Label x:Name="labelFall" Content="双臂拥抱" TextBlock.FontSize="13" TextBlock.FontFamily="微软雅黑" TextBlock.Foreground="White" HorizontalAlignment="Left" Margin="173,49,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelFallCount" Content="(次)" TextBlock.FontSize="10" TextBlock.FontFamily="微软雅黑" TextBlock.Foreground="White" HorizontalAlignment="Left" Margin="234,104,0,0" VerticalAlignment="Top" Width="27"/>
+        <TextBox x:Name="textHandle" IsReadOnly="True" Background="Transparent" VerticalContentAlignment="Center" TextBlock.Foreground="White" TextBlock.FontSize="20" BorderThickness="0" TextBlock.FontWeight="Bold" Text="{Binding StatCtrl.PutHandCount}" HorizontalAlignment="Center" Margin="69,77,181,23" TextAlignment="Center" VerticalAlignment="Center" Width="55" Height="50"/>
+        <TextBox x:Name="textFall" IsReadOnly="True" Background="Transparent" VerticalContentAlignment="Center" TextBlock.Foreground="White" TextBlock.FontSize="20" BorderThickness="0" TextBlock.FontWeight="Bold" Text="{Binding StatCtrl.FallCount}" HorizontalAlignment="Center" Margin="179,76,71,24" TextWrapping="Wrap"  TextAlignment="Center" VerticalAlignment="Center" Width="55" Height="50"/>
+
+    </Grid>
+</UserControl>

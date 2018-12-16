@@ -1,0 +1,26 @@
+﻿<Window x:Class="FaceApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FaceApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="700" Width="1100"
+        WindowStyle="ToolWindow" WindowState="Normal"
+        Background="#0F132E">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="64"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <local:MainMenuCtl Height="64" Grid.Row="0"/>
+        <local:TimeCtrl Height="150" Width="300" Margin="19,29,773,435" Grid.Row="1" DataContext="{Binding TimeOper}"/>
+        <local:StatisticsCtrl Height="150" Width="300" Margin="19,199,773,265" Grid.Row="1" DataContext="{Binding StatOper}"/>
+        <local:VideoCtrl Width="430" Height="320" Grid.Row="1" Background="Black" DataContext="{Binding VideoOper}" Margin="329,29,333,265"/>
+        <local:FaceCtrl Height="200" Width="180" Margin="19,369,893,45" Grid.Row="1" DataContext="{Binding FaceOper.FaceObjOne}"/>
+        <local:FaceCtrl Height="200" Width="180" Margin="207,369,705,45" Grid.Row="1" DataContext="{Binding FaceOper.FaceObjTwo}"/>
+        <local:FaceCtrl Height="200" Width="180" Margin="395,369,517,45" Grid.Row="1" DataContext="{Binding FaceOper.FaceObjThree}"/>
+        <local:FaceCtrl Height="200" Width="180" Margin="584,369,328,45" Grid.Row="1" DataContext="{Binding FaceOper.FaceObjFour}"/>
+        <local:ActionTrajectory Height="540" Width="300" Grid.Row="1" Margin="776,29,16,45"/>
+    </Grid>
+</Window>

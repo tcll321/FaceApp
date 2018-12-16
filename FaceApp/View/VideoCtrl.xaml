@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="FaceApp.VideoCtrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:wfh="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration"
+             xmlns:wfc="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+             xmlns:local="clr-namespace:FaceApp"
+             mc:Ignorable="d" >
+    <Grid>
+        <WindowsFormsHost x:Name="form1" HorizontalAlignment="Left" Height="320"  VerticalAlignment="Top" Width="430">
+            <wfc:FlowLayoutPanel x:Name="flowLayoutPanel1">
+            </wfc:FlowLayoutPanel>
+            
+        </WindowsFormsHost>
+    </Grid>
+</UserControl>
