@@ -9,6 +9,13 @@ namespace FaceApp.Model
 {
     public class VideoModel : ViewModelBase
     {
+        private bool _handUpImageEnable = true;
+        public bool HandUpImageEnable
+        {
+            get { return _handUpImageEnable; }
+            set { _handUpImageEnable = value; }
+        }
+
         FaceSdk.Callback_OnFaceInfo _faceInfo;
         FaceSdk.Callback_OnTrajectoryInfo _trajectInfo;
         int device = 0;
@@ -22,23 +29,30 @@ namespace FaceApp.Model
         public int StartVideo()
         {
             int ret = 0;
-            ret = FaceSdk.Face_Init(out device);
-            if (ret != 0)
-                return ret;
-            ret = FaceSdk.Face_Create(0, GlobalData.instance.VideoPtr, _faceInfo, 0);
-//             ret = FaceSdk.Face_Create(0, 0, _faceInfo, 0);
-            int i = 0;
-//             foreach(Int32 item in GlobalData.instance.FaceImageHandle)
-//             {
-//                 FaceSdk.Face_SetFaceWnd(i, item);
-//                 i++;
-//             }
-// 
-//             ret = FaceSdk.Face_InitTrajectory();
+            try
+            {
+
+//             ret = FaceSdk.Face_Init(out device);
 //             if (ret != 0)
 //                 return ret;
-//             ret = FaceSdk.Face_StartTrajectory(GlobalData.instance.VideoPtr, _trajectInfo, 0);
+//             ret = FaceSdk.Face_Create(0, GlobalData.instance.VideoPtr, _faceInfo, 0);
+//             ret = FaceSdk.Face_Create(0, 0, _faceInfo, 0);
+//             int i = 0;
+                //             foreach(Int32 item in GlobalData.instance.FaceImageHandle)
+                //             {
+                //                 FaceSdk.Face_SetFaceWnd(i, item);
+                //                 i++;
+                //             }
+                // 
+                //             ret = FaceSdk.Face_InitTrajectory();
+                //             if (ret != 0)
+                //                 return ret;
+                //             ret = FaceSdk.Face_StartTrajectory(GlobalData.instance.VideoPtr, _trajectInfo, 0);
 
+            }
+            catch (Exception)
+            {
+            }
             return ret;
         }
     }

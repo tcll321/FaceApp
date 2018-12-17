@@ -8,10 +8,14 @@
              xmlns:local="clr-namespace:FaceApp"
              mc:Ignorable="d" >
     <Grid>
-        <WindowsFormsHost x:Name="form1" HorizontalAlignment="Left" Height="320"  VerticalAlignment="Top" Width="430">
-            <wfc:FlowLayoutPanel x:Name="flowLayoutPanel1">
-            </wfc:FlowLayoutPanel>
-            
+         <WindowsFormsHost x:Name="form1" HorizontalAlignment="Left" Height="320"  VerticalAlignment="Top" Width="430" Panel.ZIndex="0">
+              <wfc:FlowLayoutPanel x:Name="flowLayoutPanel1">
+              </wfc:FlowLayoutPanel>
         </WindowsFormsHost>
+            <WindowsFormsHost Margin="56,29,335,251">
+                <ElementHost>
+                    <Image Name="HandUp" Source="Resources/Handup.png" DataContext="{Binding VideoOper}"/>
+                </ElementHost>
+            </WindowsFormsHost>
     </Grid>
 </UserControl>

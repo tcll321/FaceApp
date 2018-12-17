@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\work\Face\FaceApp\FaceApp\FaceApp\obj\Debug\
+E:\myProject\人脸\20181217\FaceApp\FaceApp\obj\Debug\
 FaceApp
 none
 false
 DEBUG;TRACE
-D:\work\Face\FaceApp\FaceApp\FaceApp\App.xaml
-7126434287
-
-241442833496
+E:\myProject\人脸\20181217\FaceApp\FaceApp\App.xaml
+8-342626536
+4-1601131047
+261346032830
 15-199009658
-View\VideoCtrl.xaml;View\ActionTrajectory.xaml;View\FaceCtrl.xaml;View\MainMenuCtl.xaml;View\MainWindow.xaml;View\StatisticsCtrl.xaml;View\TimeCtrl.xaml;
+View\FaceImageCtrl.xaml;View\VideoCtrl.xaml;View\ActionTrajectory.xaml;View\FaceCtrl.xaml;View\MainMenuCtl.xaml;View\MainWindow.xaml;View\StatisticsCtrl.xaml;View\TimeCtrl.xaml;
 
 False
 

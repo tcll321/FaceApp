@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace FaceApp.ViewModel
 {
@@ -58,14 +59,17 @@ namespace FaceApp.ViewModel
             }
         }
 
-        private ImageSource _faceImage;
+        private ImageSource _faceImage = null;
         public ImageSource FaceImage
         {
             get
             {
-                object obj = Application.Current.Resources["FaceImageSource"];
-                ImageSource imageSource = obj as ImageSource;
-                _faceImage = imageSource;
+                if (_faceImage == null)
+                {
+                    object obj = Application.Current.Resources["FaceImageSource"];
+                    ImageSource imageSource = obj as ImageSource;
+                    _faceImage = imageSource;
+                }
                 return _faceImage;
             }
             set

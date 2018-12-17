@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace FaceApp.ViewModel
 {
@@ -29,7 +30,6 @@ namespace FaceApp.ViewModel
         //判断faceObjOne，faceObjTwo，faceObjThree，faceObjFour是否使用，也就是判断界面是否空闲
         private void timeFunc(object source, System.Timers.ElapsedEventArgs e)
         {
-            
         }
 
         private FaceObject faceObjOne;
@@ -140,6 +140,22 @@ namespace FaceApp.ViewModel
             }
             if (curIndex >= 3) curIndex = 0;
             else curIndex++;
+        }
+        public void SetFaceImage(int id, string imagePath)
+        {
+            BitmapImage bitmapImage = new BitmapImage();
+            bitmapImage.BeginInit();  //给BitmapImage对象赋予数据的时候，需要用BeginInit()开始，用EndInit()结束
+            bitmapImage.UriSource = new Uri(imagePath);
+            bitmapImage.EndInit();
+            ImageSource imageSource = bitmapImage as ImageSource;
+            if (id == 0)
+                faceObjOne.FaceImage = imageSource;
+            else if(id == 1)
+                faceObjTwo.FaceImage = imageSource;
+            else if (id == 2)
+                faceObjThree.FaceImage = imageSource;
+            else if (id == 3)
+                faceObjFour.FaceImage = imageSource;
         }
     }
 }
