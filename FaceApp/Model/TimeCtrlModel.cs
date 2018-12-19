@@ -17,8 +17,8 @@ namespace FaceApp.Model
             set { curTime = value; NotifyChange(); }
         }
 
-        private int askCount;
-        public int AskCount
+        private string askCount;
+        public string AskCount
         {
             get {return askCount; }
             set { askCount = value; NotifyChange(); }

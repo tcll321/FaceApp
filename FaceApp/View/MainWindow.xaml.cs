@@ -1,4 +1,5 @@
-﻿using FaceApp.ViewModel;
+﻿using FaceApp.Model;
+using FaceApp.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +26,38 @@ namespace FaceApp
         {
             InitializeComponent();
             this.DataContext = new MainWinCtrl();
+            this.Closing += Window_Closing;
+            this.KeyDown += main_window_KeyDown;
+        }
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+//             FaceSdk.Face_Delete(0);
+//             FaceSdk.Face_StopTrajectory();
+        }
+        private void main_window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.F12)
+            {
+                if (this.WindowStyle == WindowStyle.None)//全屏
+                {
+                    this.WindowState = WindowState.Normal;
+                    this.WindowStyle = WindowStyle.SingleBorderWindow;
+                }
+                else//非全屏
+                {
+                    this.WindowStyle = WindowStyle.None;
+                    this.WindowState = WindowState.Normal;
+                    this.WindowState = WindowState.Maximized;
+                }
+            }
+            else if (e.Key == Key.Escape)
+            {
+                if (this.WindowStyle == WindowStyle.None)//全屏
+                {
+                    this.WindowState = WindowState.Normal;
+                    this.WindowStyle = WindowStyle.SingleBorderWindow;
+                }
+            }
         }
     }
 }

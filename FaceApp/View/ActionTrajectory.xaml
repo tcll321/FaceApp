@@ -8,6 +8,12 @@
              d:DesignHeight="480" d:DesignWidth="300"
              Background="#202342">
     <Grid>
-            
+<!--         <Grid.Background> -->
+<!--             <ImageBrush ImageSource="{DynamicResource MapSource}"  Stretch="UniformToFill" /> -->
+<!--         </Grid.Background> -->
+        <Canvas x:Name="Canvast">
+            <!--<Image Source="Resources/Position.png" Width="40" Canvas.Left="{Binding PointX}" Canvas.Bottom="{Binding PointY}" Visibility="{Binding ShowPoint}" /> 
+             <Image Source="Resources/Position.png" Width="40" Canvas.Left="{Binding PointX}" Canvas.Bottom="{Binding PointY}" Visibility="{Binding ShowPoint}" />--> 
+         </Canvas> 
     </Grid>
 </UserControl>

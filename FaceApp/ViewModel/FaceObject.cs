@@ -2,6 +2,7 @@
 using FaceApp.Model;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,7 +14,8 @@ namespace FaceApp.ViewModel
 {
     class FaceObject : ViewModelBase
     {
-        int curFaceCtrlId = 1;
+        private string curFaceImage="";
+        public int curFaceCtrlId = 1;
         public FaceModel FaceCtrl { get; set; }
         public FaceObject(int ctrlID)
         {
@@ -22,6 +24,66 @@ namespace FaceApp.ViewModel
             FaceCtrl.Id = "ID号:000" + curFaceCtrlId.ToString();
             FaceCtrl.Sex = "性别：女";
             FaceCtrl.Age = "青年";
+            if(ctrlID == 1)
+                SetFaceImage("./defultImage/1.png");
+            else if (ctrlID == 2)
+                SetFaceImage("./defultImage/2.png");
+            else if (ctrlID == 3)
+            {
+                SetFaceImage("./defultImage/3.png");
+                FaceCtrl.Sex = "性别：男";
+            }
+            else if (ctrlID == 4)
+                SetFaceImage("./defultImage/4.png");
+            else
+                SetFaceImage("");
+        }
+
+        public void SetFaceImage(string faceImage)
+        {
+            try
+            {
+
+            if (faceImage == null)
+            {
+                object obj = Application.Current.Resources["FaceImageSource"];
+                ImageSource imageSource = obj as ImageSource;
+                imageSource.Clone();
+                FaceImage = imageSource;
+                FaceImage.Freeze();
+                return;
+            }
+            if (faceImage == "")
+            {
+                object obj = Application.Current.Resources["FaceImageSource"];
+                ImageSource imageSource = obj as ImageSource;
+                imageSource.Clone();
+                FaceImage = imageSource;
+                FaceImage.Freeze();
+                return;
+            }
+
+            BitmapImage bitmapImage = new BitmapImage();
+            bitmapImage.BeginInit();  //给BitmapImage对象赋予数据的时候，需要用BeginInit()开始，用EndInit()结束
+            bitmapImage.CacheOption = BitmapCacheOption.OnLoad;
+            using (Stream ms = new MemoryStream(File.ReadAllBytes(faceImage)))
+            {
+                bitmapImage.StreamSource = ms;
+                bitmapImage.EndInit();
+                FaceImage = bitmapImage as ImageSource;
+                FaceImage.Freeze();
+            }
+//             if (curFaceImage.Length>0)
+//             {
+//                 File.Delete(curFaceImage);
+//             }
+            }
+            catch (Exception)
+            {
+
+            }
+
+            curFaceImage = faceImage;
         }
 
         private ImageBrush _idImage;
@@ -75,6 +137,7 @@ namespace FaceApp.ViewModel
             set
             {
                 _faceImage = value;
+//                 _faceImage.Freeze();
                 NotifyChange();
             }
         }

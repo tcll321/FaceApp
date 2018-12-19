@@ -36,9 +36,16 @@ namespace FaceApp.ViewModel
         }
         public void SetStatisticsInfo(int total, int fall, int punch, int raise, int nTracker)
         {
-            statCtrl.FallCount = fall.ToString();
+            statCtrl.PunchCount = punch.ToString();
 //             statCtrl.PunchCount = punch.ToString();
             statCtrl.PutHandCount = raise.ToString();
+        }
+        public void SetStatistics(int motion)
+        {
+            if (motion == 1)
+                statCtrl.Embrace++;
+            if (motion == 2)
+                statCtrl.SayHello++;
         }
         private void timeFunc(object source, System.Timers.ElapsedEventArgs e)
         {

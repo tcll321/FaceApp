@@ -8,7 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("view/resources/imagesourcedic.xaml")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("view/resources/faceimage.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("view/resources/faceimageback.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("view/resources/handup.png")]
 
 

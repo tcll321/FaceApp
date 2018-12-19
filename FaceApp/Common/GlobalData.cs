@@ -40,5 +40,18 @@ namespace FaceApp.Common
                 videoPtr = value;
             }
         }
+        private Int32 mapPtr;
+        public Int32 MapPtr
+        {
+            get
+            {
+                return mapPtr;
+            }
+            set
+            {
+                mapPtr = value;
+            }
+        }
+
     }
 }

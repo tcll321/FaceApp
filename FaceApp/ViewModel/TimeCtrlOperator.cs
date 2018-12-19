@@ -27,5 +27,9 @@ namespace FaceApp.ViewModel
         {
             TimeCtrl.CurTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
         }
+        public void SetAskCount(int count)
+        {
+            TimeCtrl.AskCount = string.Format("{0:N0}", count);
+        }
     }
 }

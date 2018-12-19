@@ -14,7 +14,15 @@ namespace FaceApp.ViewModel
             timeOper = new TimeCtrlOperator();
             statOper = new StatisticsOperator();
             faceOper = new FaceOperator();
-            videoOper = new VideoOperator(statOper, faceOper);
+            actionOper = new ActionTrajectoryOperator();
+            videoOper = new VideoOperator(statOper, faceOper, actionOper, timeOper);
+        }
+
+        private ActionTrajectoryOperator actionOper = null;
+        public ActionTrajectoryOperator ActionOper
+        {
+            get { return actionOper; }
+            set { actionOper = value; NotifyChange(); }
         }
 
         private VideoOperator videoOper = null;
@@ -23,7 +31,7 @@ namespace FaceApp.ViewModel
             get
             {
                 if (videoOper == null)
-                    videoOper = new VideoOperator(statOper, faceOper);
+                    videoOper = new VideoOperator(statOper, faceOper, actionOper, timeOper);
                 return videoOper;
             }
         }

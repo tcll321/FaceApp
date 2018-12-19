@@ -56,6 +56,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
@@ -85,12 +86,17 @@
     <Compile Include="Model\StatisticsModel.cs" />
     <Compile Include="Model\TimeCtrlModel.cs" />
     <Compile Include="Model\VideoModel.cs" />
+    <Compile Include="ViewModel\ActionTrajectoryObject.cs" />
+    <Compile Include="ViewModel\ActionTrajectoryOperator.cs" />
     <Compile Include="ViewModel\FaceObject.cs" />
     <Compile Include="ViewModel\FaceOperator.cs" />
     <Compile Include="ViewModel\MainWinCtrl.cs" />
     <Compile Include="ViewModel\VideoOperator.cs" />
     <Compile Include="View\FaceImageCtrl.xaml.cs">
       <DependentUpon>FaceImageCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MapCtrl.xaml.cs">
+      <DependentUpon>MapCtrl.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\VideoCtrl.xaml.cs">
       <DependentUpon>VideoCtrl.xaml</DependentUpon>
@@ -109,15 +115,23 @@
     <Compile Include="View\TimeCtrl.xaml.cs">
       <DependentUpon>TimeCtrl.xaml</DependentUpon>
     </Compile>
+    <Resource Include="View\Resources\Position.png" />
+    <Resource Include="View\Resources\Map.png" />
+    <Resource Include="View\Resources\Title.png" />
     <Page Include="View\FaceImageCtrl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Resource Include="View\Resources\FaceFrame.png" />
     <Content Include="View\Resources\ImageSourceDic.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Page Include="View\MapCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\VideoCtrl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

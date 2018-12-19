@@ -42,4 +42,14 @@ inv_ratio = 0.02
 [BODY]
 height=1650
 min_height=1200
-zfile=C:\\Users\\Administrator\\Desktop\\新建文件夹\\config\\average_z_400.txt
+zfile=F:\\test\\Release\\config\\average_z_400.txt
+[RENDER]
+bk_map = ../resource/desktop.png
+bk_fall =
+bk_punch = 
+bk_wave = ../resource/bk_wave.png
+bk_hug = ../resource/bk_hug.png
+bk_mask = ../resource/bk_mask.jpg
+map_area = 605,150, 646,756
+map_room_area = 679,220, 459,436
+motion_size = 140,140

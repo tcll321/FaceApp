@@ -28,5 +28,18 @@ namespace FaceApp.Model
             get { return fallCount; }
             set { fallCount = value; NotifyChange(); }
         }
+
+        private int sayHello = 0;
+        public int SayHello
+        {
+            get { return sayHello; }
+            set { sayHello = value; }
+        }
+        private int embrace = 0;
+        public int Embrace
+        {
+            get { return embrace; }
+            set { embrace = value; }
+        }
     }
 }

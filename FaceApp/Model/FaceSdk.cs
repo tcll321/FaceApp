@@ -29,14 +29,18 @@ namespace FaceApp.Model
         public int id;         //id
         public int x;          //x坐标
         public int y;          //y坐标
-        public int motion;     //运动姿态 punch = 1, raise_hand = 2, fall = 3
+        public int body_x;
+        public int body_y;
+        public int body_w;
+        public int body_h;
+        public int motion;     //运动姿态 punch出拳(双臂展开) = 1, raise_hand = 2(打招呼), fall = 3
     }
 
     public class FaceSdk
     {
         private const string libPath = @".\FaceSdk.dll";
 
-        public delegate void Callback_OnFaceInfo(int device, int sex, int age, int id, int userParam);
+        public delegate void Callback_OnFaceInfo(int device, int sex, int age, int id, string faceImage, int userParam);
         [DllImport(libPath)]
         public static extern int Face_Init(out int deviceCnt);
 
@@ -53,6 +57,9 @@ namespace FaceApp.Model
         public static extern int Face_InitTrajectory();
 
         public delegate void  Callback_OnTrajectoryInfo(_TrajectoryStruct info, int userParam);
+
+        [DllImport(libPath)]
+        public static extern int Face_SetWnd(int hwndVideo, int hwndMap);
 
         [DllImport(libPath)]
         public static extern int Face_StartTrajectory(int hwnd, Callback_OnTrajectoryInfo info, int userParam);

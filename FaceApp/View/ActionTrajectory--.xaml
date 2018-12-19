@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="FaceApp.ActionTrajectory"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FaceApp"
+             mc:Ignorable="d" 
+             d:DesignHeight="480" d:DesignWidth="300"
+             Background="#202342">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="{DynamicResource MapSource}"  Stretch="UniformToFill" />
+        </Grid.Background>
+        <Canvas>
+            <Image Source="Resources/Position.png" Width="40" Canvas.Left="{Binding PointX}" Canvas.Bottom="{Binding PointY}" Visibility="{Binding ShowPoint}" />
+            <Image Source="Resources/Position.png" Width="40" Canvas.Left="{Binding PointX}" Canvas.Bottom="{Binding PointY}" Visibility="{Binding ShowPoint}" />
+        </Canvas>
+    </Grid>
+</UserControl>
