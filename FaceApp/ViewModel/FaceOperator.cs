@@ -35,7 +35,6 @@ namespace FaceApp.ViewModel
             timer.AutoReset = true;//设置是执行一次（false）还是一直执行(true)；
             timer.Enabled = true;
             timer.Start();
-            SetObjectInfo(faceObjOne, 1, 10, SexType.Male);
 
 //             BitmapImage bitmapImage = new BitmapImage();
 //             bitmapImage.BeginInit();  //给BitmapImage对象赋予数据的时候，需要用BeginInit()开始，用EndInit()结束
